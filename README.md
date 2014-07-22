@@ -1,2 +1,2 @@
-dropwizard-test
+dropwizard-demo
 ===============
