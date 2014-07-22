@@ -13,8 +13,8 @@ public class BookService {
     private static final Map<String, Book> BOOKS = new HashMap<String, Book>();
 
     static {
-        BOOKS.put("123456789", new Book("123456789", "Bob Smith", "Fairy Tales"));
-        BOOKS.put("222333444", new Book("222333444", "Sarah Jones", "Blah Blah Blah"));
+        BOOKS.put("1234567890", new Book("1234567890", "Bob Smith", "Fairy Tales"));
+        BOOKS.put("1122334455", new Book("1122334455", "Sarah Jones", "Blah Blah Blah"));
     }
 
     public Collection<Book> getBooks() {
