@@ -24,4 +24,8 @@ public class BookService {
     public Optional<Book> getBook(String isbn) {
         return fromNullable(BOOKS.get(isbn));
     }
+
+    public void store(Book book) {
+        BOOKS.put(book.getIsbn(), book);
+    }
 }

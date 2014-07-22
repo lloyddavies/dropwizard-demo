@@ -5,10 +5,8 @@ import com.google.common.base.Optional;
 import net.lloyddavies.dropwizard.core.Book;
 import net.lloyddavies.dropwizard.services.BookService;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.validation.Valid;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.Collection;
 
@@ -28,5 +26,11 @@ public class BookResource {
     @Timed
     public Optional<Book> getBook(@PathParam("isbn") String isbn) {
         return bookService.getBook(isbn);
+    }
+
+    @POST
+    @Timed
+    public void getBook(@Valid Book book) {
+        bookService.store(book);
     }
 }
