@@ -13,7 +13,11 @@ import java.util.Collection;
 @Path("/books")
 @Produces(MediaType.APPLICATION_JSON)
 public class BookResource {
-    private final BookService bookService = new BookService();
+    private final BookService bookService;
+
+    public BookResource(BookService bookService) {
+        this.bookService = bookService;
+    }
 
     @GET
     @Timed
